@@ -54,6 +54,15 @@ app.get("/eszak", (req, res) => {
     })
 })
 
+
+app.delete("/torles/:id", (req, res) => {
+    const sql = "DELETE FROM `regiok` WHERE Rid = ?";
+    db.query(sql, [req.params.id], (err, result) => {
+    if (err) return res.json(err);
+    return res.json(result)
+    })
+})
+
 app.listen(3001, () => {
     console.log("A szerver a 3001-es porton fut.");
 });
