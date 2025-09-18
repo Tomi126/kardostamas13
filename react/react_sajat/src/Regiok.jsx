@@ -1,4 +1,5 @@
 import React from "react"
+import Navbar from "./navbar"
 
 function Regiok() {
 
@@ -7,6 +8,8 @@ function Regiok() {
       <div>
         <h1>Régiók</h1>
       </div>
+      <Navbar />
+
       </>
     )
 }

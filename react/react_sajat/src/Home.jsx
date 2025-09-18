@@ -1,4 +1,6 @@
 import React from "react"
+import Navbar from "./navbar"
+
 
 function Home() {
 
@@ -7,6 +9,7 @@ function Home() {
       <div>
         <h1>Főoldal</h1>
       </div>
+      <Navbar />
       </>
     )
 }
