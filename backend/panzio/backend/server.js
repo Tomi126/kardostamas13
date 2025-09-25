@@ -27,8 +27,8 @@ app.get("/fogado", (req, res) => {  //szobák információjának lekérdezése
 });
 
 app.get("/kihasznaltsag", (req, res) => {  //szobák kihasználtságának lekérdezése
-    const sql = "SELECT szobak.sznev AS szobanev, COUNT(vendeg) AS vendegek, SUM(DATEDIFF(tav, erk)) AS vendegejszakak FROM foglalasok INNER JOIN szobak ON foglalasok.szoba = szobak.szazon GROUP BY szoba ORDER BY vendegejszakak ASC, vendegek ASC;"; //SQL lekérdezés
-    db.query(sql, (err, result) => {
+    const sql = "SELECT szobak.sznev AS szobanev, COUNT(vendeg) AS vendegek, SUM(DATEDIFF(tav, erk)) AS vendegejszakak FROM foglalasok INNER JOIN szobak ON foglalasok.szoba = szobak.szazon GROUP BY szoba ORDER BY vendegejszakak ASC, vendegek ASC;"; //SQL lekérdezés. a DATEDIFF függvényt az AI ajánlotta.
+    db.query(sql, (err, result) => { 
     if (err) return res.json(err); //hiba esetén hibaüzenet visszaküldése json formátumban
     return res.json(result) //eredmény visszaküldése json formátumban
     })
