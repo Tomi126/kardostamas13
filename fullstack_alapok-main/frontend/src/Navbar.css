@@ -16,13 +16,19 @@ amas13\fullstack_alapok-main\frontend\src\components\Navbar.css */
   list-style: none;
   display: flex;
   gap: 1rem;
+
 }
 
 .navbar-links a {
   color: white;
   text-decoration: none;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 1px 1px 2px 2 #c6c6c6;
 }
 
 .navbar-links a:hover {
-  text-decoration: underline;
+  background-color: #555;
+  transition: background-color 0.5s ease;
 }
