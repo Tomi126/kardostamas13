@@ -1,6 +1,6 @@
 // components/UserTable.jsx
 import React from 'react';
-import UserRow from './UserRow';
+import UserRow from './TableRows';
 
 
 
