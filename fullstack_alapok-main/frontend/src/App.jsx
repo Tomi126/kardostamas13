@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import UserForm from './components/UserAdd';
 import UserTable from './components/TableHeader';
 import Navbar from './components/Navbar';
-import './App.css';
+import './css/App.css';
 
 function App() {
     const [users, setUsers] = useState([]);
